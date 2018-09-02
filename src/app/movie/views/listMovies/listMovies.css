@@ -45,6 +45,9 @@
 .hide {
     display: none;
 }
+.filter-container {
+    display: flex;
+}
 .searchBox{
         width: 50%;
         padding: 10px;

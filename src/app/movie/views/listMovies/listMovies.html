@@ -6,29 +6,31 @@
                         placeholder="Use me to search Movie" 
                         ng-model="$ctrl.searchText.name" 
                         ng-change="$ctrl.update_navigator()">
-                <div class="genre-container">
-                        <input type="button" 
-                                class="genre-filter-btn" 
-                                value="Filter" 
-                                ng-click="$ctrl.showGenreList = !$ctrl.showGenreList">
-                        <div class="genre-checkbox-container" 
-                            ng-if="$ctrl.showGenreList">
-                            <span> <b>Genres list: </b> </span>
-                            <label ng-repeat="genre in $ctrl.genres_list">
-                                <input type="checkbox" 
-                                        checklist-model="$ctrl.checkedGenre" 
-                                        checklist-value="genre" 
-                                        ng-change="$ctrl.update_navigator()"> {{genre}}
-                            </label>
-                        </div>
-                </div>
-                <div class="sortBy">
-                    Sort By:
-                    <select ng-options="order.show for order in [{show: '', val: false, text: ''}, 
-                                                                {show: 'ASC', val: false, text: 'name'}, 
-                                                                {show: 'DESC', val: true, text: 'name'}]" ng-model="$ctrl.sortBy"
-                        ng-change="$ctrl.update_navigator()">
-                    </select>
+                <div class="filter-container">
+                    <div class="genre-container">
+                            <input type="button" 
+                                    class="genre-filter-btn" 
+                                    value="Filter" 
+                                    ng-click="$ctrl.showGenreList = !$ctrl.showGenreList">
+                            <div class="genre-checkbox-container" 
+                                ng-if="$ctrl.showGenreList">
+                                <span> <b>Genres list: </b> </span>
+                                <label ng-repeat="genre in $ctrl.genres_list">
+                                    <input type="checkbox" 
+                                            checklist-model="$ctrl.checkedGenre" 
+                                            checklist-value="genre" 
+                                            ng-change="$ctrl.update_navigator()"> {{genre}}
+                                </label>
+                            </div>
+                    </div>
+                    <div class="sortBy">
+                        Sort By:
+                        <select ng-options="order.show for order in [{show: '', val: false, text: ''}, 
+                                                                    {show: 'ASC', val: false, text: 'name'}, 
+                                                                    {show: 'DESC', val: true, text: 'name'}]" ng-model="$ctrl.sortBy"
+                            ng-change="$ctrl.update_navigator()">
+                        </select>
+                    </div>
                 </div>
             </div>
         
