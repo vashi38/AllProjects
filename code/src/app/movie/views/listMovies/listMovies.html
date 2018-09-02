@@ -1,0 +1,38 @@
+
+<div >
+    <div class="searchBox-container">
+        <input type="text" class="searchBox" placeholder="Use me to search Movie" 
+        ng-model="$ctrl.searchText.name" ng-change="$ctrl.filterList()">
+        <div class="sortBy">
+            Sort By: 
+            <select ng-options="order for order in ['', 'ASC','DESC']" 
+                ng-model="$ctrl.sortBy" ng-change="$ctrl.sortAction()" >
+            </select>    
+        </div>
+    </div>
+    
+    <div class="movie-container">
+        <movie-component class="movie" movie="movie" ng-repeat="movie in $ctrl.page.list "> </movie-component>
+        <div class="nav-btn-container" ng-if="$ctrl.page.list.length > 0">
+                <input type="button" value="Previous" ng-click="$ctrl.back()"/>
+                <span class="show_full">Page No.: {{$ctrl.page.page_no}} / {{$ctrl.page.total_pgs}}</span>
+                <div class="show_full">
+                    Per Page: 
+                    <select ng-options="val as val for val in [5,10,15,20,25,30]" 
+                        ng-model="$ctrl.perPg" ng-change="$ctrl.updatePerPg()" ></select>
+                    
+                </div>
+                <input type="button" value="Next" ng-click="$ctrl.next()"/> 
+        </div> 
+    </div>
+    <div class="show_small">
+            <span >Page No.: {{$ctrl.page.page_no}} / {{$ctrl.page.total_pgs}}</span>
+            <div >
+                Per Page: 
+                <select ng-options="val as val for val in [5,10,15,20,25,30]" 
+                    ng-model="$ctrl.perPg" ng-change="$ctrl.updatePerPg()" ></select>
+                
+            </div>
+    </div>
+    
+</div>
