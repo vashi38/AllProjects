@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 import listMovies from './views/listMovies/listMovies';
+import movieApp from './views/movieApp/main';
 import myDataService from './services/data.service';
 import movieService from './services/application.service';
 import createPG from './Filters/custom.filter';
@@ -13,6 +14,7 @@ angular
   .module(movieModule, [])
   .component('listMovies', listMovies)
   .component('movieComponent', movieComponent)
+  .component('movieApp', movieApp)
   .factory('myDataService', myDataService)
   .factory('movieService', movieService)
   .filter('createPG', createPG)

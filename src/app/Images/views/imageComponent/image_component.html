@@ -1,0 +1,19 @@
+<div class="image-container">
+    <div class="image-header">
+        <img ng-src="{{$ctrl.image.ownerImg}}" class="owner-img"/>
+        <div class="image-details">
+            <span class="image-user-name">{{$ctrl.image.username}}</span>
+            <span class="image-upload-date">{{$ctrl.image.date | date:'dd MMM yyyy'}}</span>
+        </div>
+    </div>
+    <div class="image-div">
+        <img class="small-img" 
+            ng-src="{{$ctrl.image.smallImageUrl}}" 
+            ng-show="!$ctrl.image.showBigImg" />
+        <img class = "big-img"
+            ng-src="{{$ctrl.image.bigImageUrl}}" 
+            ng-show="$ctrl.image.showBigImg"
+            ng-load="$ctrl.showBigImg($ctrl.image)"
+            ng-style="$ctrl.image.style"/>
+    </div>
+</div>
