@@ -11,6 +11,7 @@
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+    width: 100%;
 }
 .movie-name {
     font-family: cursive;
@@ -88,11 +89,15 @@
     .show_small {
         display: flex;
         justify-content: space-between;
-        width: 70%;
+        width: 80%;
         margin: auto;
     }
     .searchBox-container{
         flex-direction: column;
         align-items: center;
+    }
+    .movie-container {
+        margin: 10px;
+        width: auto;
     }
 }
