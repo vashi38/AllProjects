@@ -1,0 +1,20 @@
+<div class="navigation"><a ui-sref="homeAutoApp.AllRooms">{{$ctrl.ActiveRoom.name}}</a> > <a ui-sref="homeAutoApp.AllSwitchBoards">Switch Boards</a> > Add Switch Board</div>
+
+<div>
+    <h3 class="formHeader">Add New SwitchBoard Form</h3>
+    <form class="addSwitchBoardForm">
+        <table class="formTable">
+            <tr>
+                <th>SwitchBoard Name*: </th>
+                <td><input type="text" ng-model="$ctrl.SBName"/></td>
+            </tr>
+            <tr>
+                <th>IP Address:</th>
+                <td><input type="text" ng-model="$ctrl.IPAdd"/></td>
+            </tr>
+        </table>
+       
+    </form>
+    <input type="button" value="Add SwitchBoard" class="addBtn" ng-show="!$ctrl.editMode" ng-click="$ctrl.handleAddBtnClick()"/>
+    <input type="button" value="Save Changes" class="addBtn" ng-show="$ctrl.editMode" ng-click="$ctrl.handleSaveBtnClick()"/>
+</div>

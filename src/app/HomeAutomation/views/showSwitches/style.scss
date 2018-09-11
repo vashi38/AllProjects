@@ -1,0 +1,44 @@
+.switch {
+    border: 1px solid;
+    padding: 30px;
+    flex: 1 1 40%;
+    &.active {
+        background: #00BB00;
+        color: white;
+    }
+    &:hover{
+        cursor: pointer;
+        
+    }
+}
+
+.switch-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.knob {
+    border: 1px solid;
+    padding: 10px;
+    color: black;
+    flex: 1;
+    background-color: #fff;
+    &.knob-active {
+        background: #440000;
+        color: white;
+    }
+    &:hover{
+        cursor: pointer;
+        background: #440000;
+        color: white;
+    }
+}
+
+.knob-wrapper {
+    margin-top: 15px;
+    display: flex;  
+    
+}

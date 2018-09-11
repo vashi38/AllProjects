@@ -1,0 +1,35 @@
+<div style = "margin-bottom: 70px;">
+<div class="navigation">All Rooms</div>
+<div class="EditBtn">
+  <input  
+        type="button" 
+        value="Edit"
+        ng-show="!$ctrl.editMode" 
+        ng-click="$ctrl.handleEditBtnClick()" />
+  <input class=""
+         type="button" 
+         value="Save" 
+         ng-show="$ctrl.editMode" 
+         ng-click="$ctrl.handleSaveBtnClick()" />
+  <input class=""
+         type="button" 
+         value="Cancel" 
+         ng-show="$ctrl.editMode" 
+         ng-click="$ctrl.handleCancelBtnClick()" />
+  <input class=""
+         type="button" 
+         value="Clear Data" 
+         ng-show="$ctrl.editMode" 
+         ng-click="$ctrl.handleClrDataBtnClick()" />
+</div> 
+<div class="room-wrapper">
+  <div class="room" 
+      ng-click="$ctrl.handleRoomClick(rm)" 
+      ng-class="" 
+      ng-repeat="rm in $ctrl.allRooms">
+      <span class="closeBtn" ng-show="$ctrl.editMode" ng-click="$ctrl.handleDeleteBtn(rm)">X</span>
+    {{rm.name}}
+  </div>
+  <input type="button" class="AddRoomBtn" value = "Add Room" ng-click = "$ctrl.handleAddRoomBtnClick()"/>
+</div>
+</div>

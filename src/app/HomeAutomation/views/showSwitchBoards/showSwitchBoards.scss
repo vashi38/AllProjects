@@ -1,0 +1,39 @@
+.switch-board {
+    border: 1px solid;
+    padding: 30px;
+    flex: 1 1 40%;
+    position: relative;
+    &.active {
+        background: #00BB00;
+        color: white;
+    }
+    &:hover{
+        cursor: pointer;
+        background: #00BB00;
+        color: white;
+    }
+}
+
+.switch-board-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    margin-top: 40px;
+}
+.AddSwitchBoardBtn {
+    // display: block;
+    width: 100%;
+    background: #72d304b2;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0;
+    flex: 1 1 50%;
+    // padding: 20px;
+}
+@media screen and (min-width: 768px) {
+    .AddSwitchBoardBtn {
+      width: 35%;
+    }
+}    

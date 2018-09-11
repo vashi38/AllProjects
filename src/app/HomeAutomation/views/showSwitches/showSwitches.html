@@ -1,0 +1,18 @@
+<div class = "navigation"><a ui-sref="homeAutoApp.AllRooms">{{$ctrl.ActiveRoom.name}}</a> > <a ui-sref="homeAutoApp.AllSwitchBoards">{{$ctrl.ActiveSwitchBoard.name}}</a> > Switches</div>
+<div class="switch-wrapper">
+  <div  class="switch"
+        ng-click="$ctrl.handleSwitchClick(sw)"
+        ng-class="sw.state.active ? 'active' : ''"
+        ng-repeat="sw in $ctrl.allSwitches">
+        {{sw.name}}
+    <div class="knob-wrapper" ng-if="sw.type==='KNOB'">
+        <span   class = "knob"
+                ng-class = "sw.state.val === speed ? 'knob-active' : ''" 
+                ng-repeat = "speed in [0,1,2,3,4,5]" 
+                ng-click = "sw.handleKnobToggle(speed, $event)">
+            {{speed}}
+        </span>
+    </div>
+  </div>
+
+</div>

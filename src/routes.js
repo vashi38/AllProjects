@@ -3,7 +3,7 @@ export default routesConfig;
 /** @ngInject */
 function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
-  $urlRouterProvider.otherwise('/MovieApp');
+  $urlRouterProvider.otherwise('/homeAutoApp/AllRooms');
 
   $stateProvider
     .state('MovieApp', {
@@ -13,5 +13,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('ImageApp', {
       url: '/ImageApp',
       component: 'showImages'
-    });
+    })
+    .state('homeAutoApp', {
+      url: '/homeAutoApp',
+      component: 'homeAutoApp'
+    })
+    
+    ;
 }

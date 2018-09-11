@@ -1,0 +1,72 @@
+.room {
+    border: 1px solid;
+    padding: 30px;
+    flex: 1 1 40%;
+    position: relative;
+
+    &.active {
+        background: rgb(0, 187, 0);
+        color: white;
+    }
+    &:hover{
+        cursor: pointer;
+        background: #00BB00;
+        color: white;
+    }
+}
+
+.room-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.navigation {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    a {
+        color:blue;
+        &:hover {
+            color: #0000AA;
+        }
+    }
+}
+.EditBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    margin: 5px;
+}
+.AddRoomBtn {
+    // display: block;
+    width: 100%;
+    background: #72d304b2;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0;
+    flex: 1 1 50%;
+    // padding: 20px;
+}
+.closeBtn {
+    top: 20px;
+    right: 15px;
+    position: absolute;
+    border-radius: 100%;
+    padding: 6px;
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .AddRoomBtn {
+      width: 35%;
+    }
+}    

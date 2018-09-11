@@ -1,0 +1,37 @@
+<div style="margin-bottom: 70px">
+  <div class="navigation"> 
+    <a ui-sref="homeAutoApp.AllRooms">{{$ctrl.ActiveRoom.name}}</a> > Switch Boards
+  </div>
+  <div class="EditBtn">
+      <input  
+            type="button" 
+            value="Edit"
+            ng-show="!$ctrl.editMode" 
+            ng-click="$ctrl.handleEditBtnClick()" />
+      <input class=""
+             type="button" 
+             value="Save" 
+             ng-show="$ctrl.editMode" 
+             ng-click="$ctrl.handleSaveBtnClick()" />
+      <input class=""
+             type="button" 
+             value="Cancel" 
+             ng-show="$ctrl.editMode" 
+             ng-click="$ctrl.handleCancelBtnClick()" />
+    </div>
+  <div class="switch-board-wrapper">
+    <div class="switch-board" 
+            ng-click="$ctrl.handleSwitchBoardClick(sb, $event)" 
+            ng-class="" 
+            ng-repeat="sb in $ctrl.ActiveRoom.getSwitchBoards()">
+      <span class="closeBtn" ng-if="$ctrl.editMode" ng-click="$ctrl.handleDeleteBtn(sb, $event)">X</span>
+      {{sb.name}}
+      
+    </div>
+    <input type="button" 
+            class="AddSwitchBoardBtn" 
+            value="Add Switch Board" 
+            ng-click="$ctrl.handleAddSBBtnClick()" />
+  </div>
+
+</div>

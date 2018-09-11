@@ -1,0 +1,15 @@
+<div class="navigation"><a ui-sref="homeAutoApp.AllRooms">All Rooms</a> > Add Room</div>
+<div style="margin-top:30px">
+    <h3 class="formHeader">Add New Room Form</h3>
+    <form class="addRoomForm">
+        <table class="formTable">
+            <tr>
+                <th>Room Name*: </th>
+                <td><input type="text" ng-model="$ctrl.roomName"/></td>
+            </tr>
+        </table>
+       
+    </form>
+    <input type="button" value="Add Room" class="addBtn" ng-show="!$ctrl.editMode" ng-click="$ctrl.handleAddBtnClick()"/>
+    <input type="button" value="Save Changes" class="addBtn" ng-show="$ctrl.editMode" ng-click="$ctrl.handleSaveBtnClick()"/>
+</div>
