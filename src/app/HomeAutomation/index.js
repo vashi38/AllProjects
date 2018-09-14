@@ -31,6 +31,6 @@ angular
   .component('homeAutoApp', homeAutoApp)
   .factory('MyDataService', MyDataService)
   .factory('MyRoomService', MyRoomService)
-  .config(routesConfig);;
+  .config(routesConfig);
   
   
