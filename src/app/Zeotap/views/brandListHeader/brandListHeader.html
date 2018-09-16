@@ -1,0 +1,29 @@
+<div class="brandList-header">
+        <div>
+            <span class="header-element">Advertiser: </span>
+            <div class="advertiser-searchbox-container">
+                <input class="advertiser-searchBox" 
+                    type="text" 
+                    placeholder="Enter Advertiser Name"
+                    ng-model="$ctrl.advertiserSerach" 
+                    ng-change="$ctrl.update_advertiserList()"
+                    ng-blur="$ctrl.onBlurAdvertiserSearch($event)"> 
+                <div class="advertiser-dropdown" ng-if="$ctrl.isAdvertiserSearchFocused">
+                    <div class="advertiser-dropdown-list">
+                        <span class="dropdown-item"
+                            ng-repeat="item in $ctrl.advertiserList"
+                            ng-click="$ctrl.selectAdvertiser(item)">{{item}}</span>
+                    </div>
+                </div>
+            </div>
+                
+            
+        </div>
+        <div>
+            <span class="header-element">Timeline: </span>
+            <select ng-options="timeline.value for timeline in $ctrl.timelineList " 
+                    ng-model="$ctrl.timeline"
+                    ng-change="$ctrl.update_timeline()">
+            </select>
+        </div>
+    </div>

@@ -1,0 +1,6 @@
+<div ng-if="$ctrl.showListHeader" class="serachRegion">
+    <brandlist-header list="$ctrl.advertiserList" callback="$ctrl.updateBrandList"></brandlist-header>   
+</div>
+<div >
+    <brandlist-body filteredbrands="$ctrl.filteredList" selectedfilter="$ctrl.selection" ></brandlist-body>
+</div>

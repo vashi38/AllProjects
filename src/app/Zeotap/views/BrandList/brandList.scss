@@ -1,0 +1,24 @@
+.serachRegion {
+    padding: 30px;
+    border-bottom: solid 1px black;
+}
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.table-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.table-style {
+    width: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .table-container{
+        margin-top: 50px;
+    } 
+}

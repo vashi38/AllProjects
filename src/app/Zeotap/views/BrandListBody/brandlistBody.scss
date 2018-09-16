@@ -1,0 +1,24 @@
+.showMessage{
+    display: flex;
+    justify-content: center;
+    color: gray;
+    align-items: center;
+    height: 300px;
+}
+.table-body{
+    width: 50%;
+    margin: auto;
+
+}
+.brand-name {
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .table-body{
+        width: 90%;
+        margin: auto;
+    }
+    .showMessage>h3{
+        width: 50%;
+    }
+}

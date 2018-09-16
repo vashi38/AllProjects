@@ -1,0 +1,24 @@
+<div ng-if="$ctrl.showTable" class="table-body">
+    <div class="details-header">
+        <span>Hello {{$ctrl.selectedfilter.advertiser}} !</span>
+        <span ng-if="$ctrl.selectedfilter.timeline !== null">Showing {{$ctrl.selectedfilter.timeline.value}} data</span>
+    </div>
+    <div class="table-container">
+        <table class=" table table-bordered table-style">
+            <tr>
+                <th class="brand-name" ng-click="$ctrl.updateSortBy('brand_name')">Brand Name</th>
+                <th >First Campaign Name</th>
+                <th>Count of Campaign inside Brand</th>
+            </tr>
+            <tr ng-repeat="row in $ctrl.tableDataList | orderBy: $ctrl.sortBy.value : $ctrl.sortBy.dir">
+                <td>{{row.brand_name}}</td>
+                <td>{{row.getFirstCampaignName()}}</td>
+                <td>{{row.getCampaignCount()}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div ng-if="!$ctrl.showTable" class="showMessage">
+    <h3>Please select the Advertiser to see the results! </h3>
+</div>
+

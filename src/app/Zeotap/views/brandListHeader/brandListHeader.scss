@@ -1,0 +1,50 @@
+.brandList-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.advertiser-container {
+    position: relative;
+}
+.advertiser-dropdown {
+   
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    border: solid 1px;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    background-color: white;
+}
+.advertiser-dropdown-list {
+    display: flex;
+    flex-flow: column;
+}
+.advertiser-searchbox-container {
+    position: relative;
+    float: right;
+    margin-left: 10px;
+}
+.advertiser-searchBox {
+    width: 100%;
+}
+.dropdown-item {
+    padding: 5px;
+    border-bottom:solid 1px lightgray;
+}
+.dropdown-item:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .brandList-header {
+        flex-flow: column;
+        align-items: flex-start;
+    } 
+    .brandList-header>div {
+        margin-top: 10px;
+    }
+    
+}
