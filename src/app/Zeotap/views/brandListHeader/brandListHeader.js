@@ -56,12 +56,13 @@ function brandlistHeader( $log, $timeout, $filter) {
     
     vm.update_advertiserList = function() {
         let advertiserList = vm.list;
-        vm.advertiserList = advertiserList.filter(function (advertiser) {
-            if(advertiser.indexOf(vm.advertiserSerach)<0)
-                return false;
-            else    
-                return true;
-        })
+        // vm.advertiserList = advertiserList.filter(function (advertiser) {
+        //     if(advertiser.indexOf(vm.advertiserSerach)<0)
+        //         return false;
+        //     else    
+        //         return true;
+        // })
+        vm.advertiserList = $filter('filter')(advertiserList, vm.advertiserSerach);
         vm.isAdvertiserSearchFocused = true;
     }
     vm.onBlurAdvertiserSearch = function(event) {
